@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.projektmunka.viewModel.SessionViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SessionActivity">
+
+        <!-- Container for MapFragment and DataFragment -->
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+
+        <!-- Bottom Sheet -->
+        <FrameLayout
+            android:id="@+id/bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            android:background="@drawable/rounded_btm_sheet">
+
+            <!-- Content of the bottom sheet -->
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_remove_24"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center|top"/>
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/nearbyUserButton"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="13dp"
+            android:background="@drawable/button2_bg"
+            android:src="@drawable/outline_person_add_alt_1_24"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

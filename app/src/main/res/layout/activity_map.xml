@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.projektmunka.viewModel.userManagementViewModel.UserDataViewModel" />
+    </data>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MapActivity">
+        <!-- MapView -->
+        <org.osmdroid.views.MapView
+            android:id="@+id/mMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"/>
+
+        <!-- Bottom Sheet -->
+        <FrameLayout
+            android:id="@+id/bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="520dp"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            android:background="@drawable/rounded_btm_sheet">
+
+            <!-- Content of the bottom sheet -->
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_remove_24"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center|top"/>
+        </FrameLayout>
+
+    <!-- Round Button -->
+    <ImageButton
+        android:id="@+id/nearbyUserButton"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="13dp"
+        android:background="@drawable/button2_bg"
+        android:src="@drawable/outline_person_add_alt_1_24"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

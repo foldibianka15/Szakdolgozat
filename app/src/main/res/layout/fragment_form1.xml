@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:orientation="vertical"
+    android:layout_marginTop="60dp"
+    android:padding="40dp">
+
+    <!-- Address input -->
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextAddress"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:textSize="15dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="Enter address" />
+
+    <!-- Choose address or set actual location -->
+    <RadioGroup
+        android:id="@+id/radioGroupLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioChooseAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/lilac"
+            android:checked="true"
+            android:text="Choose Address" />
+
+        <RadioButton
+            android:id="@+id/radioSetActualLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/lilac"
+            android:text="Set Actual Location" />
+    </RadioGroup>
+
+    <!-- Target location input -->
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextMaxWalkingTime"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="Enter maximum walking time in hours" />
+
+    <!-- Create route button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCreateRoute"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:background="@drawable/button2_bg"
+        android:text="Create Route"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12dp" />
+</LinearLayout>
